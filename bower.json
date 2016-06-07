@@ -1,0 +1,21 @@
+{
+  "name": "civic-hack-sf",
+  "description": "Graph representation of juvenile recidivisim data",
+  "main": "webpack.config.js",
+  "authors": [
+    "Patrick San Juan <psj.webdev@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "^6.2.3"
+  }
+}
