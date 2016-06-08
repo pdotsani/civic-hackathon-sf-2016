@@ -2,6 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import ADbayarea from 'services/adbayarea';
 import ReactHighcharts from 'react-highcharts';
+import { Link } from 'react-router';
 
 const d = new ADbayarea;
 const config = {
@@ -29,6 +30,7 @@ class Dbayarea extends React.Component {
 	render() {
 		return (
 			<div>
+				<Link to='/'>Back home</Link>
 				<ReactHighcharts config={config} />
 			</div>
 		)
