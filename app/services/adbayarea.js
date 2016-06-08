@@ -18,6 +18,29 @@ class ADbayarea {
 		return _.uniq(_.values(this.county));
 	}
 
+	getAllDeaths(county) {
+		let byYearData = this.byYear();
+		let years = this.getYears();
+		let data = [];
+
+		if (county !== 'all') {
+			years.forEach(year => {
+				data.push(byYearData[year][county].all_deaths);
+			});
+		} else {
+			let counties = this.getCounties();
+			counties.forEach(county => {
+				let tmp = {['name']: county,['data']:[]};
+				years.forEach(year => {
+					tmp.data.push(byYearData[year][county].all_deaths);
+				});
+				data.push(tmp);
+			});
+		}
+		console.log(data);
+		return data;
+	}
+
 	byIndex() {
 		let data = [];
 		

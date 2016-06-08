@@ -6,7 +6,7 @@ class Home extends React.Component {
 		return (
 			<div>
 				<ul>
-					<li><Link to="/dbayarea">Recidivism</Link></li>
+					<li><Link to="/dbayarea">All Deaths</Link></li>
 				</ul>
 			</div>
 		)

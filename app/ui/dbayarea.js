@@ -1,9 +1,19 @@
 import React from 'react';
-import deaths from 'data/adbayarea.json';
 import _ from 'lodash';
 import ADbayarea from 'services/adbayarea';
+import ReactHighcharts from 'react-highcharts';
 
-var d = new ADbayarea;
+const d = new ADbayarea;
+const config = {
+	title: {
+		text: 'All Deaths in the Bay Area'
+	},
+
+	xAxis: {
+		categories: d.getYears()
+	},
+	series: d.getAllDeaths('all')
+};
 
 class Dbayarea extends React.Component {
 	constructor(props) {
@@ -13,12 +23,13 @@ class Dbayarea extends React.Component {
 	componentWillMount() {
 		console.log(d.getYears());
 		console.log(d.getCounties());
+		console.log(d.getAllDeaths('all'));
 	}
 
 	render() {
 		return (
 			<div>
-				Graph here...
+				<ReactHighcharts config={config} />
 			</div>
 		)
 	}
