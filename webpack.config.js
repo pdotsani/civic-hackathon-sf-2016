@@ -15,6 +15,7 @@ module.exports = {
                 test: /\.js?$/,
                 exclude: /(node_modules|bower_components)/,
                 query: {
+                    plugins: ['lodash'],
                     presets: ['react', 'es2015', 'stage-2']
                 }
             }
