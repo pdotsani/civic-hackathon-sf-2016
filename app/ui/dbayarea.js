@@ -8,15 +8,17 @@ var d = new ADbayarea;
 class Dbayarea extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			data: d.get()
-		};
+	}
+
+	componentWillMount() {
+		console.log(d.getYears());
+		console.log(d.getCounties());
 	}
 
 	render() {
 		return (
 			<div>
-				{JSON.stringify(this.state.data, null, 2)}
+				Graph here...
 			</div>
 		)
 	}
